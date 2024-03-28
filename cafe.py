@@ -25,4 +25,4 @@ for item in menu:
     total_stock += stock[item] * price[item]
 
 # Print total stock value
-print(total_stock)
+print(f' The total value of your stock is {total_stock}')
