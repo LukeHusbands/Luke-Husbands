@@ -23,20 +23,20 @@ if menu == "investment".upper():
     # user inputs how many years they would like to invest for.
     time_period = float(input("\nHow many years will you be investing? "))
 
-    # input function to ask the user whether they would like simple or compound interest
+    # user inout whether they would like simple or compound interest
     interest = input("\nWould you like simple or compound interest? ").lower()
 
-  # if simple: calculate the interest using the correct formula and print.
+  # calculate simple interest and print.
     if interest == "simple".lower():
         simple_interest = amount_invested *(1+ interest_rate * time_period)
         print (f"\nYour final amount after {float(time_period)} years  will be {simple_interest}")
 
-    # if compound: calculate the interest using the correct formula and print.
+    # calculate compound interest and print.
     elif interest == "compound".lower(): 
         compound_interest = amount_invested * math.pow((1+ interest_rate),time_period)
         print(f"\nYour final amount after {float(time_period)} years will be {compound_interest}")
      
-     # if the user enters anything else prompt them to enter either of the two
+     # if incorrect entry prompt correct entry
     else: 
         print("\nplease enter 'simple' or 'compound'")   
 
@@ -61,7 +61,7 @@ elif menu == "bond".upper():
     # print how much they will have to pay over how many months
     print(f"\nEvery month you will have to repay {repayment} over {int(repayment_timeframe)} months ")
 
-# print message to prompt the user to enter a valid option from the menu
+# prompt the user to enter a valid option from the menu
 else:
     print("\nPlease enter a valid option")
 
